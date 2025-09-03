@@ -2,7 +2,7 @@ name: feiboye1364 #976
 on: #29816
   workflow_dispatch: #17523
   schedule: #18125
-    - cron: '18 1/6 * * *' #26305
+    - cron: '18 * * * *' #26305
 jobs: #16096
   build: #18612
     runs-on: ubuntu-latest #27156
